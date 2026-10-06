@@ -1,0 +1,105 @@
+/* //normal variable  */
+.button{
+    background-color: blue;
+    color: white;
+}
+
+/* SASS  */
+$primary-color : blue;
+.button{
+    background-color: $primary-color;
+    color:white;
+}
+
+//nesting normal 
+.navbar{
+    background-color: black;
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a{
+    color: white;
+}
+
+/* SASS Nesting  */
+.navbar{
+    background-color: black;
+
+    ul{
+        display: flex;
+    
+    li{
+        list-style: none;
+    
+    a{
+        color:white;
+    }
+}
+    }
+}
+
+
+
+// mixin 
+
+@mixin center {
+    display: flex;
+    align-item: center;
+    justify-content:center;
+    text-align:center;
+}
+
+.box{
+    @include center;
+}
+
+
+.box1{
+    background-color: red;
+}
+
+.box2{
+    background-color: green;
+/* } */
+
+
+/* css optimasation */
+.box1, box2{
+    background-color: yellow;
+}
+
+//loops 
+@for $i from 0 through 5{
+    .margin-#{$i}{
+        margin: #{$i *10}px;
+    }
+}
+
+//functions 
+
+@function double($number)
+{
+    @return $number*2;
+}
+.box{
+    width: double(100px)
+}
+
+/* // utility class  */
+
+.text-center{
+    text-align: center;
+}
+.mt-20{
+    margin-top: 20px;
+}
+.p-20{
+    padding:20px;
+}

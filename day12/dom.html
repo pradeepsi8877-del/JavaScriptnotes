@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JavaScript DOM</title>
+
+    <style>
+        .active {
+            background-color: green;
+            color: white;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 1. getElementById() -->
+    <h2 id="welcome-msg">Welcome, </h2>
+
+    <!-- 2. getElementsByClassName() -->
+    <h4 class="fruits">Apple</h4>
+    <h4 class="fruits">Mango</h4>
+    <h4 class="fruits">Banana</h4>
+
+
+    <!-- 3. getElementsByTagName() -->
+    <h4>Orange</h4>
+    <h4>Grapes</h4>
+
+
+    <!-- 6. textContent -->
+    <h1 id="title">Old Title</h1>
+    <!-- 7. innerHTML -->
+    <p id="message"></p>
+    <!--  style -->
+    <div class="box">
+        This is a box
+    </div>
+    <!--  classList -->
+    <h1>DOM Class Example</h1>
+    <!-- 12, 13, 14. Attributes -->
+    <a href="https://www.example.com" target="_blank">
+        Visit Website
+    </a>
+    <!-- . remove() -->
+    <p class="remove-item">
+        This paragraph will be removed using JavaScript.
+    </p>
+
+ <script>
+    // 1. getElementById()
+const username = "";
+
+const welcomeMsg = document.getElementById("welcome-msg");
+welcomeMsg.textContent += username === "" ? "Guest" : username;
+
+// 2. getElementsByClassName()
+const fruits = document.getElementsByClassName("fruits");
+for (let fruit of fruits) {
+    fruit.style.backgroundColor = "yellow";
+}
+// 3. getElementsByTagName()
+const headings = document.getElementsByTagName("h4");
+for (let heading of headings) {
+    heading.style.color = "red";
+}
+// 4. querySelector()
+const firstFruit = document.querySelector(".fruits");
+firstFruit.style.fontSize = "25px";
+// 5. querySelectorAll()
+const allFruits = document.querySelectorAll(".fruits");
+for (let fruit of allFruits) {
+    fruit.style.fontWeight = "bold";
+}
+// 6. textContent
+const title = document.getElementById("title");
+title.textContent = "JavaScript DOM";
+// 7. innerHTML
+const message = document.getElementById("message");
+message.innerHTML = "<b>Welcome to JavaScript</b>";
+// 8. style
+const box = document.querySelector(".box");
+box.style.backgroundColor = "lightblue";
+box.style.color = "black";
+box.style.padding = "20px";
+// 9. classList.add()
+const heading = document.querySelector("h1");
+heading.classList.add("active");
+// 10. classList.remove()
+heading.classList.remove("active");
+// 11. classList.toggle()
+heading.classList.toggle("active");
+// 12. getAttribute()
+const link = document.querySelector("a");
+const url = link.getAttribute("href");
+console.log(url);
+// 13. setAttribute()
+link.setAttribute("href", "https://www.google.com");
+// 14. removeAttribute()
+link.removeAttribute("target");
+// 15. createElement()
+const newElement = document.createElement("p");
+newElement.textContent = "This paragraph is created using JavaScript";
+// 16. appendChild()
+document.body.appendChild(newElement);
+// 17. remove()
+const oldElement = document.querySelector(".remove-item");
+oldElement.remove();
+ </script>
+</body>
+</html>
