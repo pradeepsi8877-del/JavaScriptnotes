@@ -12,6 +12,7 @@
 
 // // blueprint of object when we need 1000 
 // // of data then we easily use by object 
+
 function Person(name,age,salary){
     this.name =name,
     this.age=age,

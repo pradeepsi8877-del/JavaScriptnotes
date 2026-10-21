@@ -56,7 +56,7 @@ interview quetions first 3 days
 3.difference b/w null and undefine .
 4.let var and const difference.
 5.strict equality and inequality.(== and ===)
-6. ternary operator syntax.
+6. ternary operator syntax.with example .
 7.type conversion and its types .
 
 

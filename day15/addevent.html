@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventlistener</title>
+</head>
+<body>
+    
+<button id="btn">Click Me</button>
+<p id="message"></p>
+
+<!-- keyboard events  -->
+ <input id="username" placeholder="Type something">
+
+<script>
+  const button = document.getElementById("btn");
+  const message = document.getElementById("message");
+
+  button.addEventListener("click", function () {
+    message.textContent = "Button clicked!";
+  });
+
+// Event Handler Function
+  function sayHello() {
+  console.log("Hello Student!");
+}
+
+document.getElementById("btn")
+  .addEventListener("click", sayHello);
+
+  button.addEventListener("click", sayHello);   // Correct
+button.addEventListener("click", sayHello()); // Usually incorrect
+
+
+// keyboard events 
+
+  const input = document.getElementById("username");
+  input.addEventListener("keydown", function (event) {
+    console.log("Key pressed:", event.key);
+  });
+  
+</script>
+
+</body>
+</html>

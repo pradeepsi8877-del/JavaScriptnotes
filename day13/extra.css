@@ -4,7 +4,7 @@
     color: white;
 }
 
-/* SASS  */
+/* SASS variable */
 $primary-color : blue;
 .button{
     background-color: $primary-color;

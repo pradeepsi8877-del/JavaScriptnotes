@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling And Event Capturing</title>
+</head>
+<body>
+    <div id="parent">parentbutto
+        <button id="child">Click me</button>
+    </div>
+
+    <script>
+        //Event Bubbling
+        document.getElementById("parent")
+        .addEventListener("click", function(){
+            console.log("Parent Clicked")
+        })
+
+         document.getElementById("child")
+        .addEventListener("click", function(){
+            console.log("Child Clicked")
+        })
+
+        // EventCapturing
+             document.getElementById("parent")
+        .addEventListener("click", function(){
+            console.log("Parent Clicked")
+        },true)
+
+         document.getElementById("child")
+        .addEventListener("click", function(){
+            console.log("Child Clicked")
+        })
+    </script>
+</body>
+</html>

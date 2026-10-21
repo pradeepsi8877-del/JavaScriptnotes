@@ -14,7 +14,7 @@ Create new HTML elements
 Remove existing elements
 Handle user interactions
 
-Important DOM Methods Cheat Sheet
+Important DOM Methods 
 
 getElementById()
 getElementsByClassName()

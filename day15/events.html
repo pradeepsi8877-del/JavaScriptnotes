@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <div id="parent">
+  Hello
+  <h1>Heading</h1>
+  <p>Paragraph 1</p>
+  <p>Paragraph 2</p>
+</div>
+
+<!-- onclick  -->
+  <button id="otp">OTP Generate</button>
+<script>
+    let parent = document.getElementById("parent");
+console.log(parent.firstChild);
+
+console.log(parent.firstElementChild);
+console.log(parent.lastChild);
+console.log(parent.children);
+// console.log(parent.children[0]);
+// console.log(parent.children[1]);
+console.log(parent.childNodes);
+// let heading = parent.firstElementChild;
+// console.log(heading.nextElementSibling);
+
+
+ //   const otp =  document.getElementById("otp");
+      //   otp.onclick = function(e){
+      //     const num =  Math.round(Math.random()*100000);
+      //     alert(`${num}`);
+      //   }
+</script>
+</body>
+</html>
