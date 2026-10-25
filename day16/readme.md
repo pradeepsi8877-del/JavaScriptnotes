@@ -46,6 +46,9 @@ new Promise ((resolve, reject)=>{
 
 })
 
+promise dot all method :- Promise .all takes an iterable of promise and fulfills when all of them fulfill . If any promise rejects the retiurned promise rejects .
+
+
 real time example:-
 Instagram :- 10, 11
 1. like , pending , request sent to the instagram server .

@@ -28,7 +28,6 @@ let student ={
 // }
 
 
-
 // for of loop 
 // let num = [1,2,3,4];
 // for(let value of num){

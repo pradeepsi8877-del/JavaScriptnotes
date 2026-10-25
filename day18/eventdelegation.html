@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event delegation</title>
+</head>
+<body>
+    <ul id="studentList">
+        <li>Rahul</li>
+        <li>Amit</li>
+        <li>Priya</li>
+    </ul>
+
+    <script>
+        const list = document.getElementById("studentList");
+        list.addEventListener("click", function(event){
+            if(event.target.tagName === "LI"){
+                console.log("selected",event.target.textContent);
+            }
+        })
+    </script>
+</body>
+</html>

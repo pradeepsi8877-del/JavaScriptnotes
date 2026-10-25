@@ -42,3 +42,14 @@ fetchUserData(3).then((user)=>{
 }).finally(()=>{
     console.log("request completed (connection close")
 })
+
+//promise dot all method 
+const p1 = Promise.resolve("Student data")
+const p2 = Promise.resolve("Course data")
+const p3 = Promise.resolve("Marks data")
+
+Promise.all([p1,p2,p3]).then((results)=>{
+    console.log(results);
+}).catch((error)=>{
+    console.log("Error",error)
+})

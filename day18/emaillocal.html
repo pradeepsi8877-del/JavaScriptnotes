@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>By LocalStorage</title>
+</head>
+<body>
+    <form>
+        <label for="email">Email</label>
+        <input type="email" placeholder="enter your mail" id="email">
+<br>
+         <label for="pass">Password</label>
+        <input type="password" placeholder="enter your password" id="pass"> <br>
+        <button id="login">login</button>
+<br>
+  
+
+        <!-- for data get/fetch -->
+         <input type="email" placeholder="enter email data for data get" id="email1"> <br>
+         <button id="getdata">GetData</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        // <!-- for data store -->
+
+        const login =document.getElementById("login");
+        login.onclick = function(event){
+            const email = document.getElementById("email").value
+             const pass = document.getElementById("pass").value
+             window.localStorage.setItem(email,pass);
+             alert("Data saved successfully......")
+        }
+
+
+             //for data get 
+             const getData =document.getElementById("getdata")
+             getData.onclick= function(e){
+                e.preventDefault(); // html by default refresh behaviour
+                const email1= document.getElementById("email1").value
+                const userData = window.localStorage.getItem(email1);
+
+                if(userData !==null){
+                    document.getElementById("result").innerText =userData;
+
+                }else{
+                     document.getElementById("result").innerText ="data not found";
+                }
+             }
+        
+    </script>
+</body>
+</html>
+
+
