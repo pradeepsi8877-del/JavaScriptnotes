@@ -1,68 +1,88 @@
-// let student ={
-//     name:"Ravi",  
-//     age:"24",
-//     section:"d",
-//     demo:function(){ 
-//         console.log("hello invertise");
+// const person ={
+//     name:"ayush",
+//     age:22,
+//     id:101,
+//     demo: function(){
+//     return "hy"    
 //     }
 // }
-// console.log(student)
-// console.log(student.name) // [property]
-// console.log(student.demo())  // method 
+// console.log(person);
+// console.log(person.name);
+// console.log(person.age);
+// console.log(person.demo());
 
-// // blueprint of object when we need 1000 
-// // of data then we easily use by object 
+//suppose i want to 100 object we need of blueprint
+//this:- point to the current object
+//before es6
 
-function Person(name,age,salary){
-    this.name =name,
-    this.age=age,
-    this.salary=salary
+// function Person(name, age, address){
+//     this.name =name;
+//     this.age= age;
+//     this.address= address;
+// }
+
+// const p1= new Person("jay",23,"indore");
+// const p2= new Person("Pradeep",21,"rewa");
+
+// console.log(p1);
+// console.log(p1.name);
+// console.log(p2.age);
+
+
+//after ES6
+// class:- name of the Program ;
+//constructor :- for the initialization when obj is created .
+//this :- point to the current object.
+
+
+// class Person{
+//     constructor(name, age, address){
+//     this.name =name;
+//     this.age= age;
+//     this.address= address;
+//     }
+// }
+// const p1= new Person("jay",23,"indore");
+// const p2= new Person("Pradeep",21,"rewa");
+
+// console.log(p1);
+// console.log(p1.name);
+// console.log(p2.age);
+
+//we can manipulate the object 
+const pen ={
+    color :"red",
+    brand :"cello"
 }
-let p1 =new Person("Sohan", 23, 100000);
-let p2 =new Person("Mohan", 26, 200000);
+// console.log(pen);
 
-console.log(p1)
-console.log(p1.name)
-
-
-
-//add ,update, delete
-
-let pen ={
-    color:"red",
-    brand:"cello"
-}
-
-// add 
-// pen.price= 10;
-// console.log(pen) 
+// //add the key and value 
+// pen.price = 10;
+// console.log(pen);
 // console.log(pen["color"]);
 
-//update
-// pen.price =20;
-// console.log(pen)
+// //update the value 
+// pen.color ="green";
+// console.log(pen);
 
-//delete
-// delete pen.color;
-// console.log(pen)
+// //delete the key
+// delete pen.color ;
+// console.log(pen);
 
-// access keys values and key value both 
+// if you want to access the keys
+// console.log(Object.keys(pen));
+// console.log(Object.values(pen));
+// console.log(Object.entries(pen)); // it will give the array key value both
 
-console.log(Object.keys(pen)); // keys
-console.log(Object.values(pen)); // value
-console.log(Object.entries(pen));  // key value both
+// console.log(pen.hasOwnProperty("age")); // it will return boolean value 
 
-//nested object
+// freeze :- it will hold the object , you can not change/delete/add the key value
 
-let student ={
-    name:"Ravi",  
-    age:"24",
-    section:["a","b","c","d"],
-    address: {
-        state:"MP",
-        city:"Bhopal"
-    }
-}
+// Object.freeze(pen);
+// pen.id =101;
+// console.log(pen);
 
- console.log(student.address.state) 
-console.log(student.address.city)  
+// Object.seal(pen);
+// pen.id =101;
+// console.log(pen);
+

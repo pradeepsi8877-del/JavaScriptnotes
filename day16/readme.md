@@ -62,3 +62,8 @@ Event Bubbling and Event Capturing are two ways events travel through HTML eleme
 Event Bubbling:- Event Bubbling Means the events starts from the child element and moves upward to its parent Elemnt .
 
 Event Capturing:-Event Capturing means the event travels from the parent element  to the child which means parent to child.
+
+
+interview que and ans :-
+what is promise and its state also what is promise.all method()
+what is call back hell problem how to reduce it.

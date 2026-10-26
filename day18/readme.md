@@ -95,3 +95,4 @@ diff b/w synchronous and asynchronous
 diff b/w local storage session storage methods also
 what is event loop types also
 what is promise and promise.all method
+what is the purpose of async and await 

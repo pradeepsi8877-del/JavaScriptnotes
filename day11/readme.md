@@ -7,3 +7,9 @@ let/var/const  obj ={
 }
 
 this :- this refers to the current object .
+
+complete this defination by student 
+freeze:-
+seal:-
+destructor :- 
+object assign and create method :-
